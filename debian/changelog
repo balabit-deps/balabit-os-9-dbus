@@ -1,3 +1,19 @@
+dbus (1.12.20-2ubuntu4.1) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Assertion failure in dbus-marshal-validate
+    - debian/patches/CVE-2022-42010.patch: Check brackets in signature nest
+      correctly
+    - CVE-2022-42010
+  * SECURITY UPDATE: Out-of-bound access in dbus-marshal-validate
+    - debian/patches/CVE-2022-42011.patch: Validate length of arrays of
+      fixed-length items
+    - CVE-2022-42011
+  * SECURITY UPDATE: Out-of-bound access in dbus-marshal-byteswap
+    - debian/patches/CVE-2022-42012.patch: Byte-swap Unix fd indexes if needed
+    - CVE-2022-42012
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Tue, 25 Oct 2022 18:45:07 +0530
+
 dbus (1.12.20-2ubuntu4) jammy; urgency=medium
 
   * Prevent dbus from being restarted on upgrade (LP: #1962036)
